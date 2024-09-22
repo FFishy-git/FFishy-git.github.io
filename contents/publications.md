@@ -1,4 +1,4 @@
-- <strong>Chen, S</strong>., Yang, D., Li, J., Wang, S., Yang, Z., & Wang, Z. (2022). Adaptive model design for Markov decision process. In *39th International Conference on Machine Learning, 3679–3700. PMLR.*\
+- <strong>Chen, S</strong>., Yang, D., Li, J., Wang, S., Yang, Z., & Wang, Z. (2022). Adaptive model design for Markov decision process. In *International Conference on Machine Learning, 3679–3700. PMLR.*\
 [[Paper]](https://proceedings.mlr.press/v162/chen22ab/chen22ab.pdf)
 
 - <strong>Chen, S</strong>., Wang, M., & Yang, Z. (2023). Actions Speak What You Want: Provably Sample-Efficient Reinforcement Learning of the Quantal Stackelberg Equilibrium from Strategic Feedbacks. *arXiv Preprint arXiv:2307. 14085.*\
@@ -13,13 +13,13 @@
 - Zhang, Y\*., <strong>Chen, S</strong>\*., Yang, Z., Jordan, M., & Wang, Z. (2021). Wasserstein flow meets replicator dynamics: A mean-field analysis of representation learning in actor-critic. In *Advances in Neural Information Processing Systems, 34, 15993–16006.*\
 [[Paper]](https://arxiv.org/pdf/2112.13530)
 
-- <strong>Chen, S</strong>., Wu, J., Wu, Y., & Yang, Z. (2023). Learning to incentivize information acquisition: Proper scoring rules meet principal-agent model. In *40th International Conference on Machine Learning, 5194–5218. PMLR.*\
+- <strong>Chen, S</strong>., Wu, J., Wu, Y., & Yang, Z. (2023). Learning to incentivize information acquisition: Proper scoring rules meet principal-agent model. In *International Conference on Machine Learning, 5194–5218. PMLR.*\
 [[Paper]](https://arxiv.org/pdf/2303.08613)
 
 - <strong>Chen, S</strong>., Sheen, H., Wang, T., & Yang, Z. (2024a). Training Dynamics of Multi-Head Softmax Attention for In-Context Learning: Emergence, Convergence, and Optimality. In *The Thirty Seventh Annual Conference on Learning Theory (pp. 4573-4573). PMLR.*\
 [[Paper]](https://arxiv.org/pdf/2402.19442)
 
-- He, J\*., <strong>Chen, S</strong>\*., Zhang, F., & Yang, Z. (2024). From Words to Actions: Unveiling the Theoretical Underpinnings of LLM-Driven Autonomous Systems. In *41th International Conference on Machine Learning, 5194–5218. PMLR.*\
+- He, J\*., <strong>Chen, S</strong>\*., Zhang, F., & Yang, Z. (2024). From Words to Actions: Unveiling the Theoretical Underpinnings of LLM-Driven Autonomous Systems. In *International Conference on Machine Learning, 5194–5218. PMLR.*\
 [[Paper]](https://arxiv.org/pdf/2405.19883)
 
 - Wu, J., <strong>Chen, S</strong>., Wang, M., Wang, H., & Xu, H. (2024). Contractual Reinforcement Learning: Pulling Arms with Invisible Hands. *arXiv Preprint arXiv:2407. 01458.*\
