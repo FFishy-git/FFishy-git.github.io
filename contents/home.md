@@ -13,5 +13,5 @@ Ph.D., Statistics \& Data Science, Yale University, 2022—2027 (expected).\
 B.E., Electronic Engineering, Tsinghua University, 2018—2022.
 
 #### Research Interests
-Deep Learning, Various Aspects of Statistics, Reinforcement Learning
+Deep Learning, Foundation Model, Various Aspects of Statistics, Reinforcement Learning
 
