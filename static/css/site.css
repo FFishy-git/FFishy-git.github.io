@@ -5,7 +5,6 @@
   --text: #000000;
   --muted: #6c757d;
   --accent: #00356b;
-  --tag-bg: #e5ecf4;
   --rule: #e6e6e6;
   --nav-bg: rgba(255, 255, 255, 0.96);
   --btn-border: #c8c8c8;
@@ -18,7 +17,6 @@
     --text: #e8e8e8;
     --muted: #9aa0a6;
     --accent: #7fb2e5;
-    --tag-bg: #1f2b3a;
     --rule: #3a3a3c;
     --nav-bg: rgba(28, 28, 29, 0.96);
     --btn-border: #555;
@@ -31,7 +29,6 @@
   --text: #e8e8e8;
   --muted: #9aa0a6;
   --accent: #7fb2e5;
-  --tag-bg: #1f2b3a;
   --rule: #3a3a3c;
   --nav-bg: rgba(28, 28, 29, 0.96);
   --btn-border: #555;
@@ -88,13 +85,9 @@ section { margin-bottom: 40px; }
 .profile { float: right; width: 210px; margin: 0 0 16px 32px; text-align: center; }
 .profile img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.18); display: block; }
 .more-info { font-size: 0.85rem; color: var(--muted); margin-top: 10px; line-height: 1.5; }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: -10px 0 26px; }
-.tag {
-  background: var(--tag-bg); color: var(--accent); font-size: 0.82rem; font-weight: 500;
-  padding: 3px 12px; border-radius: 999px;
-}
-.interests { padding-left: 20px; }
-.interests li { margin-bottom: 4px; }
+/* Topics, grouped by research thread. */
+.tags { font-size: 0.92rem; line-height: 1.8; margin: -10px 0 26px; }
+.tags .sep { color: var(--rule); margin: 0 10px; }
 .cv-link { clear: both; }
 
 /* Headings */
@@ -106,6 +99,13 @@ h2 {
 }
 h3 { font-weight: 600; font-size: 1.15rem; margin: 22px 0 6px; }
 h3.year { color: var(--muted); font-weight: 400; }
+/* Research threads: heading on the left, papers on the right. */
+.thread-block { display: grid; grid-template-columns: 230px 1fr; gap: 28px; padding: 22px 0; border-top: 1px solid var(--rule); }
+.thread-block:first-of-type { border-top: 0; padding-top: 4px; }
+.thread-side { position: sticky; top: 72px; align-self: start; }
+.thread-side h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.thread { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.thread-block ol.bib li:first-child { padding-top: 0; }
 .note { font-size: 0.85rem; color: var(--muted); font-weight: 300; }
 
 /* News / timeline tables */
@@ -152,4 +152,6 @@ footer {
   .profile img { width: 170px; margin: 0 auto; }
   .name { font-size: 2rem; }
   table.news th { width: 72px; padding-right: 10px; }
+  .thread-block { grid-template-columns: 1fr; gap: 10px; }
+  .thread-side { position: static; }
 }
