@@ -1,180 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Academic Webpage" />
-    <meta name="author" content="senli1073" />
-    <title id="title"></title>
-
-    <!-- Icon -->
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
-
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
-        rel="stylesheet" />
-
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
-    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
-
-    <!-- Bootstrap core JS-->
-    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
-
-    <!-- For Compatability -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    
-    <!-- Markdown -->
-    <script type="text/javascript" src="static/js/marked.min.js"></script>
-
-    <!-- Mathematics -->
-    <script>
-        // See https://docs.mathjax.org/en/latest/index.html for more details.
-        MathJax = {
-            tex: {
-                packages: {},              // extensions to use
-                inlineMath: [              // start/end delimiter pairs for in-line math
-                    ['$', '$'],
-                    ['\\(', '\\)']
-                ],
-                displayMath: [             // start/end delimiter pairs for display math
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
-                ],
-                processEscapes: false,      // use \$ to produce a literal dollar sign
-                processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
-                processRefs: true,         // process \ref{...} outside of math mode
-                digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,    // pattern for recognizing numbers
-                tags: 'all',              // or 'ams' or 'all'
-                tagSide: 'right',          // side for \tag macros
-                tagIndent: '0.8em',        // amount to indent tags
-                useLabelIds: true,         // use label name rather than tag for ids
-                maxMacros: 10000,          // maximum number of macro substitutions per expression
-                maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
-                // baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
-                // (document.getElementsByTagName('base').length === 0) ? '' : String(document.location).replace(/#.*$/, ''),
-                formatError:               // function called when TeX syntax errors occur
-                    (jax, err) => jax.formatError(err)
-            }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Core JS-->
-    <script type="text/javascript" src="static/js/scripts.js"></script>
-    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siyu Chen</title>
+  <meta name="author" content="Siyu Chen">
+  <meta name="description" content="Siyu Chen, Ph.D. student in Statistics and Data Science at Yale. LLM pretraining and scaling, post-training and self-evolution, training dynamics and interpretability.">
+  <link rel="icon" href="static/assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/site.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
 </head>
+<body>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="static/assets/CV.pdf" target="_blank">CV</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">AWARDS</a>
-                    </li> -->
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Top Section -->
-    <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
-            </div>
-        </div>
-    </section>
-    <!-- Top Section -->
-
-    <!-- Photo -->
-    <div class="container px-5">
-        <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.png">
-        </div>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="social">
+      <a href="mailto:siyu.chen.sc3226@yale.edu" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://scholar.google.com/citations?user=S1tCv5MAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
+      <a href="https://github.com/FFishy-git" title="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
     </div>
-    <!-- Photo -->
-    
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
-        <div class="container px-5">
-            <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
-            </header>
-            <div class="main-body" id="home-md"></div>
-        </div>
-    </section>
-    <!-- Home -->
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="static/assets/CV.pdf" target="_blank">CV</a></li>
+      <li><button id="theme-toggle" title="Switch light / dark"><i class="fa-solid fa-circle-half-stroke"></i></button></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
+<main class="container">
 
-        </div>
-    </section>
-    <!-- Publications  -->
+  <!-- About -->
+  <section id="about">
+    <h1 class="name"><b>Siyu Chen</b> <span class="zh">陈思宇</span></h1>
+    <p class="tagline">Ph.D. student, Statistics &amp; Data Science, Yale University</p>
+    <div class="tags">
+      <span class="tag">Training Dynamics</span>
+      <span class="tag">Interpretability</span>
+      <span class="tag">LLM Pretraining</span>
+      <span class="tag">Scaling</span>
+      <span class="tag">Latent Reasoning</span>
+      <span class="tag">Post-training &amp; RL</span>
+      <span class="tag">Self-Evolution</span>
+    </div>
 
-    <!-- Awards -->
-    <!-- <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
-        <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
-            </header>
-            <div class="main-body" id="awards-md"></div>
+    <div class="profile">
+      <img src="static/assets/img/photo.jpg" alt="Siyu Chen">
+      <div class="more-info">
+        Statistics &amp; Data Science<br>
+        Yale University, New Haven, CT<br>
+        siyu.chen.sc3226 [at] yale.edu
+      </div>
+    </div>
 
-        </div>
-    </section> -->
-    <!-- Awards -->
+    <p>
+      I am a Ph.D. student in the
+      <a href="https://statistics.yale.edu" target="_blank" rel="noopener">Department of Statistics and Data Science</a>
+      at Yale University, advised by
+      <a href="https://zhuoranyang.github.io/" target="_blank" rel="noopener">Zhuoran Yang</a>.
+      Before Yale, I studied Electronic Engineering at Tsinghua University.
+    </p>
+    <p>
+      I work on large language models. My approach is to first understand how a model learns,
+      and then use that understanding to train it better. Right now I focus on three things:
+    </p>
+    <ul class="interests">
+      <li><b>Foundations of learning, training dynamics and interpretability</b>: how transformers pick up features and circuits during training, and when learning is possible at all.</li>
+      <li><b>Pretraining, scaling and latent reasoning</b>: how data, architecture and optimizer choices shape what a model learns, how that changes with compute, and how models can reason in latent space.</li>
+      <li><b>Post-training and self-evolution</b>: helping models improve their own reasoning through RL and curricula they write themselves.</li>
+    </ul>
+    <p>
+      I have interned at <b>Google Research</b> as a student researcher, and I am now a Qingyun intern at
+      <b>Tencent Hunyuan</b>, working on omni-modal pretraining.
+    </p>
+    <p><b>Beyond research</b>, I enjoy the violin and classical music. Always happy to chat about research or anything else, so feel free to reach out.</p>
+    <p class="cv-link">You can find my full CV <a href="static/assets/CV.pdf" target="_blank" rel="noopener"><b>here</b></a>.</p>
+  </section>
 
+  <!-- News -->
+  <section id="news">
+    <h2>News</h2>
+    <table class="news">
+      <tr><th>Sep 2026</th><td><a href="https://arxiv.org/abs/2606.09052" target="_blank" rel="noopener"><b>INFUSER</b></a> and our paper on <a href="https://arxiv.org/abs/2609.30957" target="_blank" rel="noopener">momentum in river-valley loss landscapes</a> are accepted to <b>NeurIPS 2026</b>.</td></tr>
+      <tr><th>Aug 2026</th><td>Joined <b>Tencent Hunyuan</b> as a Qingyun intern, working on omni-modal LLM pretraining.</td></tr>
+      <tr><th>Jul 2026</th><td>Our <a href="https://arxiv.org/abs/2609.30957" target="_blank" rel="noopener">momentum paper</a> is a <span class="oral">Spotlight</span> at the <b>ICML 2026</b> Workshop on High Dimensional Learning Dynamics.</td></tr>
+      <tr><th>Jul 2026</th><td>Our <a href="https://www.jmlr.org/papers/v27/25-2240.html" target="_blank" rel="noopener">chain-of-thought paper</a> is published in <b>JMLR</b>.</td></tr>
+      <tr><th>Jan 2026</th><td>Two papers at <b>ICLR 2026</b>: <a href="https://arxiv.org/abs/2506.14002" target="_blank" rel="noopener">sparse autoencoders for feature recovery</a>, and <a href="https://openreview.net/forum?id=bpF8zgSt41" target="_blank" rel="noopener">how transformers learn causal structure in context</a>.</td></tr>
+      <tr><th>Sep 2025</th><td><a href="https://arxiv.org/abs/2506.06259" target="_blank" rel="noopener">Franz–Parisi criterion paper</a> accepted to <b>NeurIPS 2025</b> as an <span class="oral">Oral</span>.</td></tr>
+      <tr><th>Jun 2025</th><td>Started as a student researcher at <b>Google Research</b>, studying test-time scaling of LLMs.</td></tr>
+      <tr><th>Jan 2025</th><td><a href="https://openreview.net/forum?id=is4nCVkSFA" target="_blank" rel="noopener">Single-index model paper</a> accepted to <b>ICLR 2025</b> as an <span class="oral">Oral</span>.</td></tr>
+    </table>
+  </section>
 
-    <!-- Footer-->
-    <footer class="bg-bottom text-center py-5">
-        <div class="container px-5">
-            <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/senli1073">Github</a>
-                <span class="mx-1">&middot;</span>
-                <a id="license-link" href="https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE">License</a>
-            </div>
-        </div>
-    </footer>
+  <!-- Research highlights -->
+  <section id="research">
+    <h2>Research Highlights</h2>
 
+    <h3>Foundations of Learning, Training Dynamics &amp; Interpretability</h3>
+    <ol class="bib">
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2506.14002" target="_blank" rel="noopener">Taming Polysemanticity in LLMs: Theory-Grounded Feature Recovery via Sparse Autoencoders</a></div>
+        <div class="summary">A new SAE training algorithm, Group-wise Bias Adaptation, with provable feature recovery. It finds cleaner, more interpretable features in real LLM activations.</div>
+        <div class="venue"><em>ICLR</em>, 2026 · Invited talk, FAI Seminar 2025</div>
+      </li>
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2409.10559" target="_blank" rel="noopener">Unveiling Induction Heads: Provable Training Dynamics and Feature Learning in Transformers</a></div>
+        <div class="summary">Shows end to end how training builds induction heads, the attention circuits behind in-context learning.</div>
+        <div class="venue"><em>NeurIPS</em>, 2024 · Invited talk, FAI Seminar 2024</div>
+      </li>
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2402.19442" target="_blank" rel="noopener">Training Dynamics of Multi-Head Softmax Attention for In-Context Learning: Emergence, Convergence, and Optimality</a></div>
+        <div class="summary">Tracks how multi-head attention trains and proves it converges to the optimal in-context learning algorithm.</div>
+        <div class="venue"><em>COLT</em>, 2024 <span class="oral">Oral</span> · Invited talks, RLChina 2024 and FAI Seminar 2024</div>
+      </li>
+      <li>
+        <div class="title"><a href="https://openreview.net/forum?id=is4nCVkSFA" target="_blank" rel="noopener">Can Neural Networks Achieve Optimal Computational-Statistical Tradeoff? An Analysis on Single-Index Model</a></div>
+        <div class="summary">Proves that neural networks trained by gradient descent reach the best possible sample complexity for single-index models, matching statistical-query lower bounds.</div>
+        <div class="venue"><em>ICLR</em>, 2025 <span class="oral">Oral</span></div>
+      </li>
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2506.06259" target="_blank" rel="noopener">An Optimized Franz&ndash;Parisi Criterion and Its Equivalence with SQ Lower Bounds</a></div>
+        <div class="summary">Builds an optimized Franz&ndash;Parisi criterion from statistical physics and proves it is exactly equivalent to statistical-query lower bounds for high-dimensional inference.</div>
+        <div class="venue"><em>NeurIPS</em>, 2025 <span class="oral">Oral</span></div>
+      </li>
+    </ol>
+
+    <h3>Pretraining, Scaling &amp; Latent Reasoning</h3>
+    <ol class="bib">
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2610.26030" target="_blank" rel="noopener">Truncate or Not? A Scaling Study of Looped Transformers with Truncated Backpropagation</a></div>
+        <div class="summary">A scaling law for looped transformers over model size, training tokens, and forward and backward loop counts. At matched compute, it shows when full backprop through fewer loops beats truncation.</div>
+        <div class="venue"><em>Preprint</em>, 2026 · co-first author</div>
+      </li>
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2510.14095" target="_blank" rel="noopener">Unlocking Out-of-Distribution Generalization in Transformers via Recursive Latent Space Reasoning</a></div>
+        <div class="summary">A looped transformer that reasons in latent space and generalizes to inputs far outside its training range. Probing shows what each loop computes.</div>
+        <div class="venue"><em>Journal of Machine Learning Research</em> · minor revision</div>
+      </li>
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2609.30957" target="_blank" rel="noopener">Towards Understanding Momentum Acceleration in River-Valley Loss Landscape</a></div>
+        <div class="summary">Explains why momentum speeds up training on the river-valley loss landscapes seen in LLM pretraining.</div>
+        <div class="venue"><em>NeurIPS</em>, 2026 · ICML 2026 HiLD Workshop <span class="oral">Spotlight</span></div>
+      </li>
+    </ol>
+
+    <h3>Post-training &amp; Self-Evolution</h3>
+    <ol class="bib">
+      <li>
+        <div class="title"><a href="https://arxiv.org/abs/2606.09052" target="_blank" rel="noopener">INFUSER: Influence-Guided Self-Evolution Improves Reasoning</a></div>
+        <div class="summary">A generator and a solver train together. The generator writes problems grounded in documents and learns which ones actually help the solver, using influence scores. The solver's reasoning improves as the curriculum evolves.</div>
+        <div class="venue"><em>NeurIPS</em>, 2026 · Invited talk, NICETalk 2026</div>
+      </li>
+      <li>
+        <div class="title">GPT-Driven Drug Optimization with Structured Policy Optimization Post-training</div>
+        <div class="summary">Post-trains a GPT model with a structured policy-optimization method to improve drug candidates.</div>
+        <div class="venue"><em>MLHC</em>, 2026</div>
+      </li>
+    </ol>
+
+  </section>
+
+  <!-- Full publication list -->
+  <section id="publications">
+    <h2>Publications <span class="note">(* equal contribution)</span></h2>
+
+    <h3 class="year">2026</h3>
+    <ol class="bib">
+      <li>
+        <div class="title">INFUSER: Influence-Guided Self-Evolution Improves Reasoning</div>
+        <div class="author"><b>Siyu Chen</b>, Miao Lu, Beining Wu, Heejune Sheen, Fengzhuo Zhang, Shuangning Li, Zhiyuan Li, Jose Blanchet, Tianhao Wang, Zhuoran Yang</div>
+        <div class="venue"><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2606.09052" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Towards Understanding Momentum Acceleration in River-Valley Loss Landscape</div>
+        <div class="author">Miao Lu, Zeyu Bian, Kaiyue Wen, Beining Wu, <b>Siyu Chen</b>, Tianhao Wang, Zhiyuan Li</div>
+        <div class="venue"><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2609.30957" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Truncate or Not? A Scaling Study of Looped Transformers with Truncated Backpropagation</div>
+        <div class="author">Xuyuan Xiong*, <b>Siyu Chen*</b>, Zihan Shao, Yue Su, Weiyang Jin, Ping Luo, Zhuoran Yang, Xihui Liu</div>
+        <div class="venue"><em>arXiv:2610.26030</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2610.26030" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Taming Polysemanticity in LLMs: Theory-Grounded Feature Recovery via Sparse Autoencoders</div>
+        <div class="author"><b>Siyu Chen</b>, Heejune Sheen, Xuyuan Xiong, Tianhao Wang, Zhuoran Yang</div>
+        <div class="venue"><em>International Conference on Learning Representations (ICLR)</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2506.14002" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">How Transformers Learn Causal Structures In-Context: Explainable Mechanism Meets Theoretical Guarantee</div>
+        <div class="author">Jianzhe Wei, <b>Siyu Chen</b>, Jianliang He, Zhuoran Yang</div>
+        <div class="venue"><em>International Conference on Learning Representations (ICLR)</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://openreview.net/forum?id=bpF8zgSt41" target="_blank" rel="noopener">OpenReview</a></div>
+      </li>
+      <li>
+        <div class="title">Unveiling the Statistical Foundations of Chain-of-Thought Prompting Methods</div>
+        <div class="author">Xinyang Hu, Fengzhuo Zhang, <b>Siyu Chen</b>, Zhuoran Yang</div>
+        <div class="venue"><em>Journal of Machine Learning Research (JMLR)</em>, 27(202), 2026</div>
+        <div class="links"><a class="btn" href="https://www.jmlr.org/papers/v27/25-2240.html" target="_blank" rel="noopener">JMLR</a><a class="btn" href="https://arxiv.org/abs/2408.14511" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">GPT-Driven Drug Optimization with Structured Policy Optimization Post-training</div>
+        <div class="author">Xuefeng Liu, Songhao Jiang, <b>Siyu Chen</b>, Zhuoran Yang, Yuxin Chen, Ian T. Foster, Rick L. Stevens</div>
+        <div class="venue"><em>Machine Learning for Healthcare Conference (MLHC)</em>, PMLR 340, 2026</div>
+      </li>
+      <li>
+        <div class="title">On the Mechanism and Dynamics of Modular Addition: Fourier Features, Lottery Ticket, and Grokking</div>
+        <div class="author">Jianliang He, Leda Wang, <b>Siyu Chen</b>, Zhuoran Yang</div>
+        <div class="venue"><em>arXiv:2602.16849</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2602.16849" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Neural Networks Provably Learn Spectral Representations for Group Composition</div>
+        <div class="author">Jianliang He, Leda Wang, Fengzhuo Zhang, <b>Siyu Chen</b>, Zhuoran Yang</div>
+        <div class="venue"><em>arXiv:2606.02993</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2606.02993" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Benchmarking AI Agents for Addressing Scientific Challenges Across Scales</div>
+        <div class="author">Tianyu Liu, Allen Xin Wang, Antonia Panescu, <span class="more" data-full="Lisa Xinyi Chen, Wenxin Long, Xinyu Wei, Yueqian Jing, Ziyao Zeng, Jihang Chen, Sihan Jiang, Ziqing Wang, Siyi Gu, <b>Siyu Chen</b>, Xinyang Hu, Haoran Shao, Leqi Xu, Wangjie Zheng, Zhiyuan Cao, Ada Fang, Botao Yu, Kunyang Sun, Rex Ying, Arman Cohan, Qingyu Chen, Lingzhou Xue, Kaize Ding, Yuanqi Du, Wengong Jin, Zhuoran Yang, Marinka Zitnik, James Zou, Hua Xu, Hongyu Zhao">and 30 more authors (incl. <b>Siyu Chen</b>)</span></div>
+        <div class="venue"><em>arXiv:2606.12736</em>, 2026</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2606.12736" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+    </ol>
+
+    <h3 class="year">2025</h3>
+    <ol class="bib">
+      <li>
+        <div class="title">An Optimized Franz–Parisi Criterion and Its Equivalence with SQ Lower Bounds</div>
+        <div class="author"><b>Siyu Chen</b>, Theodor Misiakiewicz, Ilias Zadik, Peiyuan Zhang</div>
+        <div class="venue"><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2025 <span class="oral">Oral</span></div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2506.06259" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Can Neural Networks Achieve Optimal Computational-Statistical Tradeoff? An Analysis on Single-Index Model</div>
+        <div class="author"><b>Siyu Chen*</b>, Beining Wu*, Miao Lu, Zhuoran Yang, Tianhao Wang</div>
+        <div class="venue"><em>International Conference on Learning Representations (ICLR)</em>, 2025 <span class="oral">Oral</span></div>
+        <div class="links"><a class="btn" href="https://openreview.net/forum?id=is4nCVkSFA" target="_blank" rel="noopener">OpenReview</a></div>
+      </li>
+      <li>
+        <div class="title">In-Context Linear Regression Demystified: Training Dynamics and Mechanistic Interpretability of Multi-Head Softmax Attention</div>
+        <div class="author">Jianliang He, Xintian Pan, <b>Siyu Chen</b>, Zhuoran Yang</div>
+        <div class="venue"><em>International Conference on Machine Learning (ICML)</em>, 2025</div>
+      </li>
+      <li>
+        <div class="title">Unlocking Out-of-Distribution Generalization in Transformers via Recursive Latent Space Reasoning</div>
+        <div class="author">Awni Altabaa, <b>Siyu Chen</b>, John Lafferty, Zhuoran Yang</div>
+        <div class="venue"><em>arXiv:2510.14095</em>, 2025</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2510.14095" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Quantile-Optimal Policy Learning under Unmeasured Confounding</div>
+        <div class="author">Zhongren Chen, <b>Siyu Chen</b>, Zhengling Qi, Xiaohong Chen, Zhuoran Yang</div>
+        <div class="venue"><em>arXiv:2506.07140</em>, 2025</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2506.07140" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Active Advantage-Aligned Online Reinforcement Learning with Offline Data</div>
+        <div class="author">Xuefeng Liu, Hung T. C. Le, <b>Siyu Chen</b>, Rick Stevens, Zhuoran Yang, Matthew R. Walter, Yuxin Chen</div>
+        <div class="venue"><em>arXiv:2502.07937</em>, 2025</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2502.07937" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+    </ol>
+
+    <h3 class="year">2024</h3>
+    <ol class="bib">
+      <li>
+        <div class="title">Unveiling Induction Heads: Provable Training Dynamics and Feature Learning in Transformers</div>
+        <div class="author"><b>Siyu Chen</b>, Heejune Sheen, Tianhao Wang, Zhuoran Yang</div>
+        <div class="venue"><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2409.10559" target="_blank" rel="noopener">arXiv</a><a class="btn" href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/7aae9e3ec211249e05bd07271a6b1441-Abstract-Conference.html" target="_blank" rel="noopener">Proceedings</a></div>
+      </li>
+      <li>
+        <div class="title">Training Dynamics of Multi-Head Softmax Attention for In-Context Learning: Emergence, Convergence, and Optimality</div>
+        <div class="author"><b>Siyu Chen</b>, Heejune Sheen, Tianhao Wang, Zhuoran Yang</div>
+        <div class="venue"><em>Conference on Learning Theory (COLT)</em>, 2024 <span class="oral">Oral</span></div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2402.19442" target="_blank" rel="noopener">arXiv</a><a class="btn" href="https://github.com/FFishy-git/MS-Attn-Simulation" target="_blank" rel="noopener">Code</a></div>
+      </li>
+      <li>
+        <div class="title">From Words to Actions: Unveiling the Theoretical Underpinnings of LLM-Driven Autonomous Systems</div>
+        <div class="author">Jianliang He*, <b>Siyu Chen*</b>, Fengzhuo Zhang, Zhuoran Yang</div>
+        <div class="venue"><em>International Conference on Machine Learning (ICML)</em>, 2024</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2405.19883" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Contractual Reinforcement Learning: Pulling Arms with Invisible Hands</div>
+        <div class="author">Jibang Wu, <b>Siyu Chen</b>, Mengdi Wang, Huazheng Wang, Haifeng Xu</div>
+        <div class="venue"><em>arXiv:2407.01458</em>, 2024</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2407.01458" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Implicit Regularization of Gradient Flow on One-Layer Softmax Attention</div>
+        <div class="author">Heejune Sheen, <b>Siyu Chen</b>, Tianhao Wang, Harrison H. Zhou</div>
+        <div class="venue"><em>arXiv:2403.08699</em>, 2024</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2403.08699" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+    </ol>
+
+    <h3 class="year">2023 and earlier</h3>
+    <ol class="bib">
+      <li>
+        <div class="title">Learning to Incentivize Information Acquisition: Proper Scoring Rules Meet Principal-Agent Model</div>
+        <div class="author"><b>Siyu Chen</b>, Jibang Wu, Yifan Wu, Zhuoran Yang</div>
+        <div class="venue"><em>International Conference on Machine Learning (ICML)</em>, 2023</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2303.08613" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Actions Speak What You Want: Provably Sample-Efficient Reinforcement Learning of the Quantal Stackelberg Equilibrium from Strategic Feedbacks</div>
+        <div class="author"><b>Siyu Chen</b>, Mengdi Wang, Zhuoran Yang</div>
+        <div class="venue"><em>arXiv:2307.14085</em>, 2023</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2307.14085" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">A Unified Framework of Policy Learning for Contextual Bandit with Confounding Bias and Missing Observations</div>
+        <div class="author"><b>Siyu Chen</b>, Yitan Wang, Zhaoran Wang, Zhuoran Yang</div>
+        <div class="venue"><em>arXiv:2303.11187</em>, 2023</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2303.11187" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+      <li>
+        <div class="title">Adaptive Model Design for Markov Decision Process</div>
+        <div class="author"><b>Siyu Chen</b>, Donglin Yang, Jiayang Li, Senmiao Wang, Zhuoran Yang, Zhaoran Wang</div>
+        <div class="venue"><em>International Conference on Machine Learning (ICML)</em>, 2022</div>
+        <div class="links"><a class="btn" href="https://proceedings.mlr.press/v162/chen22ab/chen22ab.pdf" target="_blank" rel="noopener">PDF</a></div>
+      </li>
+      <li>
+        <div class="title">Wasserstein Flow Meets Replicator Dynamics: A Mean-Field Analysis of Representation Learning in Actor-Critic</div>
+        <div class="author">Yufeng Zhang*, <b>Siyu Chen*</b>, Zhuoran Yang, Michael I. Jordan, Zhaoran Wang</div>
+        <div class="venue"><em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2021</div>
+        <div class="links"><a class="btn" href="https://arxiv.org/abs/2112.13530" target="_blank" rel="noopener">arXiv</a></div>
+      </li>
+    </ol>
+    <p class="note">Full list on <a href="https://scholar.google.com/citations?user=S1tCv5MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <table class="news">
+      <tr><th>2026 –</th><td><b>Tencent Hunyuan</b>, Qingyun Intern, Beijing<br><span class="sub">Pretraining an omni-modal LLM; using gradient information to select and improve pretraining data.</span></td></tr>
+      <tr><th>2025</th><td><b>Google Research</b>, Student Researcher<br><span class="sub">Test-time scaling of LLMs; optimizing multi-step LLM workflows.</span></td></tr>
+      <tr><th>2024 – 25</th><td><b>Yale University</b>, Teaching Assistant<br><span class="sub">Information Theory; Optimization and Computation; Deep Learning for Scientists and Engineers.</span></td></tr>
+    </table>
+
+    <h2>Education</h2>
+    <table class="news">
+      <tr><th>2022 – 27</th><td><b>Yale University</b>, Ph.D. in Statistics and Data Science<br><span class="sub">Advisor: Zhuoran Yang</span></td></tr>
+      <tr><th>2018 – 22</th><td><b>Tsinghua University</b>, B.S. in Electronic Engineering<br><span class="sub">China National Scholarship</span></td></tr>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© 2026 Siyu Chen. Design inspired by <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a>.</div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    document.getElementById("theme-toggle").addEventListener("click", function () {
+      var dark = root.getAttribute("data-theme") === "dark" ||
+        (!root.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+      var next = dark ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+    // Expand long author lists on click.
+    document.querySelectorAll(".more").forEach(function (el) {
+      el.addEventListener("click", function () { el.innerHTML = el.dataset.full; el.classList.remove("more"); }, { once: true });
+    });
+  })();
+</script>
 </body>
-
 </html>
